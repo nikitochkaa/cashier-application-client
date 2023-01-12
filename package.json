@@ -2,17 +2,25 @@
   "name": "cashier_application_client",
   "version": "0.1.0",
   "private": true,
+  "proxy": "http://localhost:8080",
+  "homepage": "./",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "cross-env": "^7.0.3",
+    "electron-is-dev": "^2.0.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.6.2",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
+  "main": "public/electron.js",
   "scripts": {
-    "start": "react-scripts start",
+    "start": "concurrently -k \"npm:react\" \"npm:electron\"",
+    "react": "cross-env BROWSER=none DANGEROUSLY_DISABLE_HOST_CHECK=true react-scripts start",
+    "electron": "wait-on http://127.0.0.1:3000 && electron .",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -25,14 +33,17 @@
   },
   "browserslist": {
     "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
+      "last 1 electron version"
     ],
     "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
+      "last 1 electron version"
     ]
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "electron": "^22.0.1",
+    "electron-builder": "^23.6.0",
+    "foreman": "^3.0.1",
+    "wait-on": "^7.0.1"
   }
 }
