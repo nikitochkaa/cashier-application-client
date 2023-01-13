@@ -1,9 +1,13 @@
 import React from "react"
-import {changeUser} from "../controllers/Navbar";
+import {changeCurrentUser} from "./Navbar";
 
 const User = (user) => {
     return (
-        <li><button onClick={user => changeUser(user)}>{user.user.name + " " + user.user.surname}</button></li>
+        <li>
+            <button onClick={() => changeCurrentUser(user.user)}>
+                {user.user.name + " " + user.user.surname}
+            </button>
+        </li>
     )
 }
 

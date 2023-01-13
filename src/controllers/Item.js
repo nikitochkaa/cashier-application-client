@@ -1,5 +1,5 @@
-export async function getUsers() {
-    return fetch("/employees/", {
+export async function getItems() {
+    return fetch("/items/", {
         headers: {
             "Content-type": "application/json"
         },

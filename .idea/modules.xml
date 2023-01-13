@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/../cashier_application_client.iml" filepath="$PROJECT_DIR$/../cashier_application_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/../bi-tjv-semestral-client.iml" filepath="$PROJECT_DIR$/../bi-tjv-semestral-client.iml" />
     </modules>
   </component>
 </project>

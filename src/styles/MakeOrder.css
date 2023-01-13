@@ -1,0 +1,67 @@
+.makeOrder {
+    background-color: lightcyan;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-flow: row;
+}
+
+.items {
+    text-align: left;
+    font-size: 20px;
+    color: black;
+    padding: 10px;
+    display: flex;
+    height: 100%;
+    flex: 65%;
+    float: left;
+    border-right: 2px solid cadetblue;
+}
+
+.items ul {
+    position: relative;
+    top: 5px;
+    left: 20px;
+}
+
+.items li {
+    margin: 10px;
+}
+
+.items button {
+    background: none;
+    color: inherit;
+    border-radius: 5px;
+    border: 1px solid black;
+    cursor: pointer;
+    font: inherit;
+    padding: 10px;
+    outline: inherit;
+}
+
+.order {
+    text-align: center;
+    font-size: 30px;
+    color: black;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    flex: 35%;
+    float: left;
+}
+
+#sendOrder {
+    position: absolute;
+    right: 10px;
+    top: 80px;
+    padding: 10px;
+}
+
+#p {
+    position: absolute;
+    right: 10px;
+    top: 140px;
+}
+
